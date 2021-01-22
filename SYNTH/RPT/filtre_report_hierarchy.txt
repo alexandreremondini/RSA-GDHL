@@ -1,0 +1,59 @@
+Warning: Design 'FILTRE' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : hierarchy
+Design : FILTRE
+Version: D-2010.03-SP5-2
+Date   : Wed Oct  7 11:45:28 2020
+****************************************
+
+Warning: 1 unresolved references are not included in this report. (RPT-2)
+
+Attributes:
+    r - licensed design
+
+FILTRE
+    cpt
+        DFEC1                     c35_CORELIB
+        NAND20                    c35_CORELIB
+        NOR20                     c35_CORELIB
+        XNR20                     c35_CORELIB
+        XOR20                     c35_CORELIB
+    dl_N_g4
+        AOI220                    c35_CORELIB
+        CLKIN0                    c35_CORELIB
+        NAND20                    c35_CORELIB
+        NOR20                     c35_CORELIB
+        reg_1
+            DFEC1                 c35_CORELIB
+        reg_2
+            DFEC1                 c35_CORELIB
+        reg_3
+            DFEC1                 c35_CORELIB
+        reg_4
+            DFEC1                 c35_CORELIB
+    fsm                                     r
+        AOI2110                   c35_CORELIB
+        CLKIN0                    c35_CORELIB
+        DFC1                      c35_CORELIB
+        DFC3                      c35_CORELIB
+        NAND20                    c35_CORELIB
+        NAND30                    c35_CORELIB
+        NOR20                     c35_CORELIB
+        NOR22                     c35_CORELIB
+        OAI210                    c35_CORELIB
+        OAI2110                   c35_CORELIB
+        TFEC1                     c35_CORELIB
+    mul
+        mul_DW_mult_uns_0                   r
+            ADD22                 c35_CORELIB
+            ADD32                 c35_CORELIB
+            CLKIN0                c35_CORELIB
+            NOR20                 c35_CORELIB
+    reg_0
+        DFEC1                     c35_CORELIB
+    rom
+        CLKIN0                    c35_CORELIB
+        NAND20                    c35_CORELIB
+        OAI210                    c35_CORELIB
+1

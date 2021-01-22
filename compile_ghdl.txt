@@ -1,0 +1,97 @@
+echo CLEANING...
+ghdl --remove --workdir=./LIB/LIB_RTL
+ghdl --remove --workdir=./LIB/LIB_BENCH
+rm -rf ./LIB/LIB_RTL
+rm -rf ./LIB/LIB_BENCH
+rm *.vcd
+rm *_tb
+mkdir ./LIB/LIB_RTL
+mkdir ./LIB/LIB_BENCH
+
+
+echo ANALYSIS OF RTL FILES
+
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/inverter.vhd
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/inverterx64.vhd
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/or_gate.vhd
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/and_gate.vhd
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/dff.vhd
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/reg.vhd
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/mux21.vhd #1 warning
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/generic_mux.vhd #1 warning
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/decoder.vhd #1 warning
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/counter.vhd
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/reg_file.vhd
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/half_adder.vhd
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/full_adder.vhd
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/adder_gen.vhd
+
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/alux64_add.vhd
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/alux64_addc.vhd
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/alux64_sub.vhd
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/alux64_subc.vhd
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/alux64_shiftr.vhd
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/alux64_shiftl.vhd
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/alux64_shiftrc.vhd
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/alux64_shiftlc.vhd
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/alux64_mul.vhd
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/alux64.vhd
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/top_alu_reg.vhd
+
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/fsm_1024.vhd
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/fsm_1024_counters.vhd
+
+ghdl -a --work=lib_rtl --workdir=./LIB/LIB_RTL --syn-binding ./SRC/RTL/top_calcul.vhd
+
+
+echo ANALYSIS OF BENCH FILES
+
+#ghdl -a --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL ./SRC/BENCH/or_gate_tb.vhd
+#ghdl -a --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL ./SRC/BENCH/counter_tb.vhd
+#ghdl -a --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL ./SRC/BENCH/generic_mux_tb.vhd #1 warning
+#ghdl -a --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL ./SRC/BENCH/reg_file_tb.vhd
+#ghdl -a --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL ./SRC/BENCH/full_adder_tb.vhd
+#ghdl -a --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL ./SRC/BENCH/decoder_tb.vhd #1 warning
+#ghdl -a --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL ./SRC/BENCH/adder_gen_tb.vhd
+#ghdl -a --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL ./SRC/BENCH/adder_synch_x64_tb.vhd
+#ghdl -a --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL ./SRC/BENCH/adder_1024_tb.vhd
+#ghdl -a --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL ./SRC/BENCH/multiplier_synch_x64_tb.vhd
+#ghdl -a --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL ./SRC/BENCH/alux64_tb.vhd
+#ghdl -a --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL ./SRC/BENCH/top_alu_reg_tb.vhd
+#ghdl -a --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL ./SRC/BENCH/fsm_1024_counters_tb.vhd
+ghdl -a --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL ./SRC/BENCH/top_calcul_tb.vhd
+
+echo ELABORATION
+
+#ghdl -e --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL or_gate_tb
+#ghdl -e --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL counter_tb
+#ghdl -e --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL generic_mux_tb #1 warning
+#ghdl -e --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL reg_file_tb
+#ghdl -e --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL decoder_tb #1 warning
+#ghdl -e --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL full_adder_tb
+#ghdl -e --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL adder_gen_tb
+#ghdl -e --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL adder_synch_x64_tb
+#ghdl -e --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL adder_1024_tb
+#ghdl -e --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL multiplier_synch_x64_tb
+#ghdl -e --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL alux64_tb
+#ghdl -e --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL top_alu_reg_tb
+#ghdl -e --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL fsm_1024_counters_tb
+ghdl -e --work=lib_bench --workdir=./LIB/LIB_BENCH --syn-binding -PLIB/LIB_RTL top_calcul_tb
+
+echo RUN AND SIMULATION
+
+#ghdl -r --work=lib_bench --syn-binding -PLIB/LIB_RTL or_gate_tb --vcd=or_gate.vcd
+#ghdl -r --work=lib_bench --syn-binding -PLIB/LIB_RTL counter_tb --vcd=counter_tb.vcd --stop-time=30ns
+#ghdl -r --work=lib_bench --syn-binding -PLIB/LIB_RTL generic_mux_tb --vcd=generic_mux_tb.vcd --stop-time=90ns
+#ghdl -r --work=lib_bench --syn-binding -PLIB/LIB_RTL reg_file_tb --vcd=reg_file_tb.vcd --stop-time=90ns
+#ghdl -r --work=lib_bench --syn-binding -PLIB/LIB_RTL full_adder_tb --vcd=full_adder.vcd
+#ghdl -r --work=lib_bench --syn-binding -PLIB/LIB_RTL decoder_tb --vcd=decoder_tb.vcd --stop-time=15ns
+#ghdl -r --work=lib_bench --syn-binding -PLIB/LIB_RTL adder_gen_tb --vcd=adder_gen_tb.vcd --stop-time=15ns
+#ghdl -r --work=lib_bench --syn-binding -PLIB/LIB_RTL adder_synch_x64_tb --vcd=adder_synch_x64_tb.vcd --stop-time=300ns
+#ghdl -r --work=lib_bench --syn-binding -PLIB/LIB_RTL adder_1024_tb --vcd=adder_1024_tb.vcd --stop-time=30ns
+#ghdl -r --work=lib_bench --syn-binding -PLIB/LIB_RTL multiplier_synch_x64_tb --vcd=multiplier_synch_x64_tb.vcd --stop-time=150ns
+#ghdl -r --work=lib_bench --syn-binding -PLIB/LIB_RTL alux64_tb --vcd=alux64_tb.vcd --stop-time=100ns
+#ghdl -r --work=lib_bench --syn-binding -PLIB/LIB_RTL top_alu_reg_tb --vcd=top_alu_reg_tb.vcd --stop-time=100ns
+#ghdl -r --work=lib_bench --syn-binding -PLIB/LIB_RTL fsm_1024_counters_tb --vcd=fsm_1024_counters_tb.vcd --stop-time=27us
+ghdl -r --work=lib_bench --syn-binding -PLIB/LIB_RTL top_calcul_tb --vcd=top_calcul_tb.vcd --stop-time=7us
+#gtkwave or_gate.vcd

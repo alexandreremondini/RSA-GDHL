@@ -1,0 +1,11 @@
+vlog -work LIB_AMS ./SRC/AMS/c35_CORELIB.v
+vlog -work LIB_AMS ./SRC/AMS/c35_CORELIB_3B.v
+vlog -work LIB_AMS ./SRC/AMS/c35_IOLIB_3B_4M.v
+vlog -work LIB_AMS ./SRC/AMS/c35_IOLIB_4M.v
+vlog -work LIB_AMS ./SRC/AMS/c35_IOLIB_ANA_3B_4M.v
+vlog -work LIB_AMS ./SRC/AMS/c35_IOLIB_ANA_4M.v
+vlog -work LIB_AMS ./SRC/AMS/c35_IOLIBV5_4M.v
+vlog -work LIB_AMS ./SRC/AMS/c35_UDP.v
+
+
+

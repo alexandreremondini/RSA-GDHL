@@ -1,0 +1,81 @@
+Warning: Design 'FILTRE' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : design
+Design : FILTRE
+Version: D-2010.03-SP5-2
+Date   : Wed Oct  7 11:45:28 2020
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    c35_CORELIB (File: /soft/AMS_400_CDS/synopsys/c35_3.3V/c35_CORELIB.db)
+
+Local Link Library:
+
+    {c35_CORELIB.db, c35_IOLIB_4M.db, c35_IOLIBV5_4M.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : nom_pvt
+    Library : c35_CORELIB
+    Process :   1.00
+    Temperature :  25.00
+    Voltage :   3.30
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    Selected manually by the user.
+
+Name           :   10k
+Location       :   c35_CORELIB
+Resistance     :   0.0014
+Capacitance    :   0.001633
+Area           :   1.8
+Slope          :   5
+Fanout   Length   Points Average Cap Std Deviation
+--------------------------------------------------------------
+     1     5.00
+
+
+
+Wire Loading Model Mode: enclosed.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    None Required
+
+Design Parameters:
+
+    None specified.
+
+Information: This design contains black box (unknown) components. (RPT-8)
+1

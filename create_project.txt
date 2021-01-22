@@ -1,0 +1,5 @@
+vlib ./LIB/LIB_RTL
+vlib ./LIB/LIB_BENCH
+vlib ./LIB/LIB_GATES
+vlib ./LIB/LIB_AMS
+

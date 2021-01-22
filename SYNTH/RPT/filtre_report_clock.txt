@@ -1,0 +1,21 @@
+Warning: Design 'FILTRE' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : clocks
+Design : FILTRE
+Version: D-2010.03-SP5-2
+Date   : Wed Oct  7 11:45:28 2020
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+clock           40.00   {20 40}                       {clk_i}
+--------------------------------------------------------------------------------
+1

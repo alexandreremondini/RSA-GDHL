@@ -1,0 +1,21 @@
+rm -rf ./LIB/LIB_RTL
+vlib ./LIB/LIB_RTL
+
+
+echo "vcom -work LIB_RTL ./SRC/RTL/reg.vhd"
+vcom -work LIB_RTL ./SRC/RTL/reg.vhd
+echo "vcom -work LIB_RTL ./SRC/RTL/dl.vhd"
+vcom -work LIB_RTL ./SRC/RTL/dl.vhd
+echo "vcom -work LIB_RTL ./SRC/RTL/accu.vhd"
+vcom -work LIB_RTL ./SRC/RTL/accu.vhd
+echo "vcom -work LIB_RTL ./SRC/RTL/rom.vhd"
+vcom -work LIB_RTL ./SRC/RTL/rom.vhd
+echo "vcom -work LIB_RTL ./SRC/RTL/mul.vhd"
+vcom -work LIB_RTL ./SRC/RTL/mul.vhd
+echo "vcom -work LIB_RTL ./SRC/RTL/cpt.vhd"
+vcom -work LIB_RTL ./SRC/RTL/cpt.vhd
+echo "vcom -work LIB_RTL ./SRC/RTL/fsm.vhd"
+vcom -work LIB_RTL ./SRC/RTL/fsm.vhd
+
+echo "vcom -work LIB_RTL ./SRC/RTL/filtre.vhd"
+vcom -work LIB_RTL ./SRC/RTL/filtre.vhd

@@ -1,0 +1,51 @@
+Warning: Design 'FILTRE' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : FILTRE
+Version: D-2010.03-SP5-2
+Date   : Wed Oct  7 11:45:28 2020
+****************************************
+
+Library(s) Used:
+
+    c35_CORELIB (File: /soft/AMS_400_CDS/synopsys/c35_3.3V/c35_CORELIB.db)
+
+Number of ports:               21
+Number of nets:                71
+Number of cells:                7
+Number of references:           7
+
+Combinational area:       22349.599953
+Noncombinational area:    15833.999451
+Net Interconnect area:    5994.000000  
+
+Total cell area:          38183.599403
+Total area:               44177.599403
+
+Information: This design contains black box (unknown) components. (RPT-8)
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ------------------------------ 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black
+                                  Total       Total    national    national    boxes   Design
+--------------------------------  ----------  -------  ----------  ----------  ------  -----------------
+FILTRE                            38183.6562    100.0      0.0000      0.0000  0.0000  FILTRE
+cpt_1                              1492.4001      3.9    455.0000   1037.3999  0.0000  cpt
+dl_1                              13249.5928     34.7   2184.0000      0.0000  0.0000  dl_N_g4
+dl_1/first                         2766.4001      7.2      0.0000   2766.4001  0.0000  reg_4
+dl_1/inter_1                       2766.4001      7.2      0.0000   2766.4001  0.0000  reg_3
+dl_1/inter_2                       2766.4001      7.2      0.0000   2766.4001  0.0000  reg_2
+dl_1/inter_3                       2766.4001      7.2      0.0000   2766.4001  0.0000  reg_1
+fsm_1                              2165.8000      5.7   1201.2000    964.6000  0.0000  fsm
+mul_f                             18345.6016     48.0      0.0000      0.0000  0.0000  mul
+mul_f/mult_18                     18345.6016     48.0  18345.6016      0.0000  0.0000  mul_DW_mult_uns_0
+reg_1                              2766.4001      7.2      0.0000   2766.4001  0.0000  reg_0
+rom_f                               163.8000      0.4    163.8000      0.0000  0.0000  rom
+--------------------------------  ----------  -------  ----------  ----------  ------  -----------------
+Total                                                  22349.6016  15834.0010  0.0000
+
+1

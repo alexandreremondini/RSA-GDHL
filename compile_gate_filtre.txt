@@ -1,0 +1,17 @@
+#nettoyage des bibliotheques de travail
+
+rm -rf ./LIB/LIB_GATES
+vlib ./LIB/LIB_GATES
+rm -rf ./LIB/LIB_BENCH
+vlib ./LIB/LIB_BENCH
+
+#compilation des fichiers sources
+
+echo "-----vlog -work LIB_GATES ./SRC/GATES/alu_top_synth.v-----"
+vlog -work LIB_GATES ./SRC/GATES/filtre_synth.v
+
+echo "-----vcom -work LIB_BENCH ./SRC/BENCH/alu_top_synth_tb.vhd-----"
+vcom -work LIB_BENCH ./SRC/BENCH/filtre_synth_tb.vhd
+
+#simulation gates
+vsim -L LIB_AMS -sdftyp /DUT=./SYNTH/SDF/filtre_synth.sdf LIB_BENCH.filtre_synth_tb -t ps

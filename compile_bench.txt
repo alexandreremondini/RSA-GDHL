@@ -1,0 +1,7 @@
+rm -rf ./LIB/LIB_BENCH
+vlib ./LIB/LIB_BENCH
+
+echo "vcom -work LIB_BENCH ./SRC/BENCH/filtre_tb.vhd"
+vcom -work LIB_BENCH ./SRC/BENCH/filtre_tb.vhd
+
+#vsim -novopt LIB_BENCH.filtre_tb_conf

@@ -1,0 +1,64 @@
+# //  ModelSim SE-64 10.0 Dec  4 2010 Linux 2.6.32-431.el6.x86_64
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+vsim -novopt LIB_BENCH.filtre_tb_conf
+# vsim -novopt LIB_BENCH.filtre_tb_conf 
+# Loading std.standard
+# Refreshing /eleves/home/alexandre.remondini/3A/SYNTH_VHDL_2021/LIB/LIB_BENCH.filtre_tb_conf
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading LIB_BENCH.filtre_tb_conf
+# Refreshing /eleves/home/alexandre.remondini/3A/SYNTH_VHDL_2021/LIB/LIB_BENCH.filtre_tb(filtre_tb_arch)
+# Loading LIB_BENCH.filtre_tb(filtre_tb_arch)
+# Refreshing /eleves/home/alexandre.remondini/3A/SYNTH_VHDL_2021/LIB/LIB_RTL.filtre(filtre_arch)
+# Loading lib_rtl.filtre(filtre_arch)
+# Refreshing /eleves/home/alexandre.remondini/3A/SYNTH_VHDL_2021/LIB/LIB_RTL.fsm(fsm_arch)
+# Loading lib_rtl.fsm(fsm_arch)
+# Refreshing /eleves/home/alexandre.remondini/3A/SYNTH_VHDL_2021/LIB/LIB_RTL.cpt(cpt_arch)
+# Loading lib_rtl.cpt(cpt_arch)
+# Refreshing /eleves/home/alexandre.remondini/3A/SYNTH_VHDL_2021/LIB/LIB_RTL.dl(dl_arch)
+# Loading lib_rtl.dl(dl_arch)
+# Refreshing /eleves/home/alexandre.remondini/3A/SYNTH_VHDL_2021/LIB/LIB_RTL.reg(reg_arch)
+# Loading lib_rtl.reg(reg_arch)
+# Refreshing /eleves/home/alexandre.remondini/3A/SYNTH_VHDL_2021/LIB/LIB_RTL.rom(rom_arch)
+# Loading lib_rtl.rom(rom_arch)
+# Refreshing /eleves/home/alexandre.remondini/3A/SYNTH_VHDL_2021/LIB/LIB_RTL.mul(mul_arch)
+# Loading lib_rtl.mul(mul_arch)
+# Refreshing /eleves/home/alexandre.remondini/3A/SYNTH_VHDL_2021/LIB/LIB_RTL.accu(accu_arch)
+# Loading lib_rtl.accu(accu_arch)
+add wave \
+{sim:/filtre_tb/Filter_IN_s } \
+{sim:/filtre_tb/Clk_s } \
+{sim:/filtre_tb/Resetb_s } \
+{sim:/filtre_tb/ADC_Busy_s } \
+{sim:/filtre_tb/Filter_out_s } \
+{sim:/filtre_tb/ADC_Convstb_s } \
+{sim:/filtre_tb/ADC_Rd_csb_s } 
+add wave \
+{sim:/filtre_tb/dut/fsm_1/Etat_present } \
+{sim:/filtre_tb/dut/fsm_1/Etat_futur } 
+add wave \
+{sim:/filtre_tb/dut/dl_1/inter_s(0) } \
+{sim:/filtre_tb/dut/dl_1/inter_s(1) } \
+{sim:/filtre_tb/dut/dl_1/inter_s(2) } \
+{sim:/filtre_tb/dut/dl_1/inter_s(3) } 
+run 2000 ns
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /filtre_tb/dut/rom_f
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /filtre_tb/dut/dl_1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 3  Instance: /filtre_tb/dut/dl_1
+run 2000 ns
+run 2000 ns
+run 2000 ns
+run 1000 ns
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /eleves/home/alexandre.remondini/3A/SYNTH_VHDL_2021/filtre_tb.do
+quit
